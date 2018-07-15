@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity instruction_file is
+port(
+  clk : in std_logic;
+  pc_in : in std_logic_vector(1 downto 0);
+  rs : out std_logic_vector(1 downto 0);
+  rt : out std_logic_vector(1 downto 0);
+  rd : out std_logic_vector(1 downto 0);
+  Opcode : out std_logic_vector(1 downto 0)
+);
+end instruction_file;
+
+architecture Behavioral of instruction_file is
+begin 
+  process(clk)
+    begin
+	   case pc_in is
+		  when "00" =>
+		    rs <= "10";
+		    rt <= "11";
+		    rd <= "00";
+		    Opcode <= "00";
+		  when "01" =>
+		    rs <= "10";
+		    rt <= "11";
+		    rd <= "00";
+		    Opcode <= "01";
+		  when "10" =>
+		    rs <= "10";
+		    rt <= "11";
+		    rd <= "00";
+		    Opcode <= "10";
+	   end case;
+  end process;
+end Behavioral;
+		  
+
+

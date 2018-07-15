@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_signed.all;
+
+entity ALU_file is
+port(
+  clk : in std_logic;
+  a, b : in std_logic_vector(7 downto 0); -- src1, src2
+  op : in std_logic_vector(1 downto 0); -- select function
+  alu_result : in std_logic_vector(7 downto 0)
+);
+end ALU_file;
+
+architecture Behavioral of ALU_file is
+signal result : std_logic_vector(7 downto 0);
+begin 
+  process(clk)
+    begin
+	   
+		
+    
+
